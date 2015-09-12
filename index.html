@@ -1,5 +1,5 @@
-<!-- Developer:  Evan 	Date:  8-20-2014 -->
-<!-- This is my first website, and will be published via the CSIF server.  It will hopefully serve as a learning experience.  I'm just starting my third year of college, and though I've learned C, C++, x86 assembly, and some computer science theory, I still am not competent in web design.  Hopefully, this experience will change that.
+<!-- Developer:  Evan 	Date:  8-20-2014 
+
 
 style type = "text/css"
 	a {color: red;} CHANGE ALL HYPERLINKS TO RED (this is called a style sheet. you could also do font:family;
@@ -21,6 +21,26 @@ style type = "text/css"
 			<style type = "text/css">
 				p {text-indent: 25px;}
 				p {font-size: 20px;}
+
+				.wrapper 
+				{
+    				/*text-align: center;*/
+				} /* .wrapper */
+
+				.button 
+				{
+    				position: absolute;
+    				top: 90%;
+				} /* .button */
+			body
+			{
+				color: black;
+				background-image: url("Kemper_Flickr.jpg");
+				-webkit-background-size: cover;
+  				/*-moz-background-size: cover; */
+  				/*-o-background-size: cover;*/
+  				/*background-size: cover;*/
+			}
 			</style>
 			<title>
 				Evan's website
@@ -34,26 +54,75 @@ style type = "text/css"
 				
 			</h1>
 			<!--<em><center>Here are some links</center></em> -->
+			<center><a href = "about.html"> About this site</a></center>
 			<center><a href = "blog.html"> Blog</a> </center>
 			<center><a href = "poems.html"> My Poems</a></center>
 			<center><a href = "shortstories.html"> My Short Stories</a></center>
 
 			<!--<center><a href = "contact.html"> Contact me</a> </center> -->
-			<center><a href = "mailto: evan.soohoo@gmail.com"> Contact me</a></center>
+			<center><a href = "mailto: evan.soohoo@gmail.com">Contact me</a></center>
 			<hr/>
-			<p>
-				Note to everyone:  Whatever you do, DO NOT use chmod 777...
-				<br><br>Hello, and welcome to CSIF!  This webpage was created via the UC Davis computer science server, and if you have an account of your own then you can create a page, too.  Simply create a directory called public_html, transfer any html files you have to that location, modify the read/write privileges of each file via chmod, and access the page by using a url similar to mine [http://csiflabs.cs.ucdavis.edu/~etsoohoo/], but with your own username.
-			</p>
-			
-			<p>
-				If you are not familiar with CSIF and/or have not taken a class in the ECS series, then I apologize for that opening jargon.  I personally think it's pretty cool, even if the page is only temporary.
-			</p>
-			<p>
-				I was hoping to use this site as a central spot for my writing.  It will contain my poems, random thoughts, and links to my short stories.  
-			
+			<div class="wrapper">
+				<button class="button" type="button" style="background-color:lightgreen" onclick="myFunction()"><font size="6" color = "black">Click for a random CS Joke!</font></button></font>
+			</div>
 			<!--<a href="http://www.writing.com/main/portfolio/view/echo1525"> A link to my writing blog </a>-->
 			<!--<a href = "http://irarelypostanything.tumblr.com/"> A link to my general blog</a>-->
 		</body>
+
+		<script = "text/javascript">
+			function myFunction()
+			{
+				var yesOrNo = prompt("These jokes are not funny.  Are you sure you want to proceed?  Type Y for yes, N for no.");
+				if(yesOrNo == "y" || yesOrNo == "Y")
+				{
+					var x = Math.floor(Math.random() * 5) + 2; 
+					//document.write(x);
+					jokeHolder(x);
+				}//if
+
+			
+			}
+			function jokeHolder(inputNum)
+			{
+					
+					if(inputNum == 1)
+					{
+						alert("There are 10 types of people in the world:");
+						alert("Those who make stupid fucking jokes about binary, and those who don't."); //about the limit
+					}
+					
+					else if(inputNum == 2)
+					{
+						alert("What did the register say to the other register?");
+						alert("\"Don't be such a flip-flop!\"")
+						
+					}
+					else if(inputNum == 3)
+					{
+						alert("What is the only thing harder than diamond?");
+						alert("Rogaway's 120 class!");
+					}
+					else if(inputNum == 4)
+					{
+						alert("What's the difference between a P problem, and an NP problem?");
+						alert("One letter!");	
+					}
+					else if(inputNum == 5)
+					{
+						alert("What does Git teach us about life?");
+						alert("If you want to COMMIT to change, you're going to have to PUSH for it!");
+					}
+					else if(inputNum == 6)
+					{
+						alert("What's another name for computational statistics?");
+						alert("R time to cry!");
+					}
+					else
+					{
+
+					}
+					
+			}
+		</script>
 
 	</html>
