@@ -2,11 +2,83 @@
 
 <html>
   <head>
-  </head>
-  <body>
 
+    <style type = "text/css">
+    p {text-indent: 25px;}
+    body 
+        {
+          background-color: rgb(245,245,220); 
+        }
+  </style>
+  </head>
+  <!--<body onUnload="alert('WE'RE NO STRANGERS TO LOVE');"> -->
+  <body>
+    <!--
+    <form name="evansForm">
+      Username: <input type="text" name="username"/>
+      Password: <input type="password" name = "password"/>
+      <input type="submit" value="Submit!"/>
+    </form>
+  -->
   	<script type = "text/javascript">
   		/*
+      function printTime()
+      {
+        var now = new Date();
+        var hours = now.getHours();
+        var mins = now.getMinutes();
+        var seconds = now.getSeconds();
+        document.write("Current time: " + hours + ":" + mins + ":" + seconds + "</br>");
+      }//printTime
+      setInterval(printTime(), 1000);
+
+      var secretPassword = document.evansForm.password.name;
+      document.write(secretPassword);
+      if(secretPassword != "1525")
+      {
+        alert("ACCESS DENIED");
+      }
+      else
+      {
+        alert("Welcome back, Evan.");
+      }
+      document.write(evan);
+
+      */
+      /*
+      function person(name, iq) //constructor
+      {
+        this.name = name;
+        this.iq = iq;
+        this.changeiq = function(inputIq)
+        {
+          this.iq = inputIq;
+        }
+        
+      }//function person
+      
+      var codingGoddess = new person("yvone", 200);
+      var codingGod = new person("edmond", 201);
+      document.write(codingGod.name);
+      codingGoddess.changeiq(9001);
+      codingGoddess.changeiq(202);
+      document.write(codingGoddess.iq);
+
+      var enemyList = new Array("zerg Army", "the bad guy in Battle Royale", "i'm all about that bass");
+      enemyList.sort();
+      enemyList.reverse();
+      document.write(enemyList);
+      */
+
+
+      /*
+      for(x = 0; x < 5; x++)
+      {
+        alert("The value of x is " + x);
+      }
+      */
+
+      /*
       function foo(x) 
       {
         alert("This is a meaningless alert");
@@ -29,7 +101,11 @@
       }//if
       */
   	</script>
-    
+    <!--
+    <form>
+      <input type="button" value="click me" onClick = "alert('SUUUP');"/>
+    </form>
+    -->
   	<p>
 				Hello, and welcome to CSIF!  This webpage was created via the UC Davis computer science server, and if you have an account of your own then you can create a page, too.  Simply create a directory called public_html, transfer any html files you have to that location, modify the read/write privileges of each file via chmod, and access the page by using a url similar to mine [http://csiflabs.cs.ucdavis.edu/~etsoohoo/], but with your own username.
 			</p>
