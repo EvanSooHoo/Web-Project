@@ -1,138 +1,180 @@
-<!-- Developer:  Evan 	Date started:  8-20-2014 
+<!-- Developer:  Evan 	Date Upgraded:  12-14-2015 
 
 Sources used:
 
-Image location: https://www.flickr.com/photos/ucdaviscoe/7693929798
+Image locations: 
+
+https://www.flickr.com/photos/ucdaviscoe/7693929798
+https://www.flickr.com/photos/ucdaviscoe/6023627596
+https://www.flickr.com/photos/ucdaviscoe/6023628768
 
 Tutorials used:
 
 The New Boston, XHTML and CSS- https://www.youtube.com/watch?v=cqszz_OfAFQ&list=PLC1322B5A0180C946 
 The New Boston, Javascript - https://www.youtube.com/playlist?list=PL46F0A159EC02DF82
+Derek Banas - https://www.youtube.com/watch?v=gqOEoUR5RHg
 w3schools.com - general reference
-
-
-style type = "text/css"
-	a {color: red;} CHANGE ALL HYPERLINKS TO RED (this is called a style sheet. you could also do font:family;
-	h1 {text-align: center; CENTER ALL TEXT OF A CERTAIN TYPE
-	in style, to change color, do
-	body
-				{
-					background-color: blue
-				
-				}
 				
 -->
 
 <!DOCTYPE html>
 
-	<html>
+<html>
 
-		<head>
-			<style type = "text/css">
-				p {text-indent: 25px;}
-				p {font-size: 20px;}
+<head>
+	<style type = "text/css">
+	p {text-indent: 25px;}
+	p {font-size: 20px;}
+	
+}
 
-				.wrapper 
-				{
-    				/*text-align: center;*/
-				} /* .wrapper */
+	.carousel-caption h1
+		{
+  		font-size: 1.4em;
+  		font-family: 'Pacifico', cursive;
+  		/*padding-bottom: .4em; */
+  		padding-right: 425px;
+		}
+	.carousel-caption h3
+		{
+  		font-size: 3em;
+  		font-family: 'Pacifico';
+  		padding-right: 450px;
+		}
+	.carousel-caption p{
+  		font-size: 1.1em;
+  		padding-right: 480px;
+		}
 
-				.button 
-				{
-    				position: absolute;
-    				top: 90%;
-				} /* .button */
-			body
-			{
-				color: black;
-				background-image: url("Kemper_Flickr.jpg");
-				-webkit-background-size: cover;
-  				/*-moz-background-size: cover; */
-  				/*-o-background-size: cover;*/
-  				/*background-size: cover;*/
-			}
-			</style>
-			<title>
-				Evan's website
-			</title>
-		</head>
+	.wrapper 
+	{
+		/*text-align: center;*/
+		} /* .wrapper */
 
-		<body>
-			<center><img src = "myface.png" height = "150" align = "middle"/> </center>
-			<h1>
-				<center>Evan's stuff </center>
-				
-			</h1>
-			<!--<em><center>Here are some links</center></em> -->
-			<center><a href = "about.html"> About this site</a></center>
-			<center><a href = "blog.html"> Blog</a> </center>
-			<center><a href = "poems.html"> My Poems</a></center>
-			<center><a href = "shortstories.html"> My Short Stories</a></center>
+		body
+		{
+			color: black;
+			/*background-image: url("Kemper_Flickr.jpg");*/
+			-webkit-background-size: cover;
+		}
+		</style>
+		<title>
+			Evan's website
+		</title>
 
-			<!--<center><a href = "contact.html"> Contact me</a> </center> -->
-			<center><a href = "mailto: evan.soohoo@gmail.com">Contact me</a></center>
-			<hr/>
-			<div class="wrapper">
-				<button class="button" type="button" style="background-color:lightgreen" onclick="myFunction()"><font size="6" color = "black">Click for a random CS Joke!</font></button></font>
-			</div>
-			<!--<a href="http://www.writing.com/main/portfolio/view/echo1525"> A link to my writing blog </a>-->
-			<!--<a href = "http://irarelypostanything.tumblr.com/"> A link to my general blog</a>-->
-		</body>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-		<script = "text/javascript">
-			function myFunction()
-			{
-				var yesOrNo = prompt("These jokes are not funny.  Are you sure you wish to proceed?  Type Y for yes, N for no.");
-				if(yesOrNo == "y" || yesOrNo == "Y")
-				{
-					var x = Math.floor(Math.random() * 6) + 1; 
-					//document.write(x);
-					jokeHolder(x);
-				}//if
+		<link rel="stylesheet" href="sidebar.css">
+	</head>
 
-			
-			}
-			function jokeHolder(inputNum)
-			{
-					
-					if(inputNum == 1)
-					{
-						alert("There are 10 types of people in the world:");
-						alert("Those who make stupid fucking jokes about binary, and those who don't."); //about the limit
-					}
-					
-					else if(inputNum == 2)
-					{
-						alert("What did the register say to the other register?");
-						alert("\"Don't be such a flip-flop!\"")
-						
-					}
-					else if(inputNum == 3)
-					{
-						alert("What is the only thing harder than diamond?");
-						alert("Rogaway's 120 class!");
-					}
-					else if(inputNum == 4)
-					{
-						alert("What's the difference between a P problem, and an NP problem?");
-						alert("One letter!");	
-					}
-					else if(inputNum == 5)
-					{
-						alert("What does Git teach us about life?");
-						alert("If you want to COMMIT to change, you're going to have to PUSH for it!");
-					}
-					else if(inputNum == 6)
-					{
-						alert("What's another name for computational statistics?");
-						alert("R time to cry!");
-					}
-					else
-					{
+	<body>
+		<div id="wrapper">
+			<nav class="navbar navbar-inverse">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button> 
+					<a class="navbar-brand" href="about.html">Evan's Website</a>
+				</div>			
 
-					}
-					
-			}
-		</script>
+				<div class="collapse navbar-collapse" id="mainNavBar">
 
-	</html>
+					<div>
+						<ul class="nav navbar-nav">
+							<li class="active"> <a href="#">Home</a></li>
+
+							<li class="dropdown">
+
+								<a class="dropdown-toggle" data-toggle="dropdown">Blog
+									<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="silverbullet.html">"The Silver Bullet"</a></li>
+										<li><a href="alonetogether.html">Thoughts on <u>Alone Together</u></a></li>
+										<li><a href="humanities.html">The Importance of Humanities Classes</a></li> 
+									</ul>
+								</li>
+
+								<li class="dropdown">
+
+									<a class="dropdown-toggle" data-toggle="dropdown">My Poems
+										<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="dayandnight.html">Day and Night</a></li>
+											<li><a href="youruinedthissong.html">You Ruined this Song</a></li>
+											<li><a href="gone.html">Gone</a></li> 
+										</ul>
+									</li>
+
+									<li> <a href="shortstories.html">My Short Stories</a></li>
+
+									
+
+								</ul>
+
+								<ul class="nav navbar-nav navbar-right">
+									<li> <a href="http://csifdocs.cs.ucdavis.edu/about-us">About CSIF</a></li>
+									<li> <a href="mailto: evan.soohoo@gmail.com">Contact Me</a></li>
+									<li> <a href="random.html">Random!</a></li>
+
+								</ul>
+							</div>
+						</div>
+					</nav>
+
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" style="position:fixed; height: 100%; width: 120%; top:52px;left: 120px;"; role="listbox">
+							<div class="item active">
+								<img src="kemper_flickr.jpg" alt="Kemper Front">
+
+								<div class="carousel-caption">
+	        						<h3>Kemper, Front Entrance</h3>
+	        						<p><left><i>Source: Tong, Kevin. Kemper Hall, UC Davis. 2012. Davis. Flickr. Web. 15 Dec. 2015. <https://www.flickr.com/photos/ucdaviscoe/7693929798></left></i></p>
+      							</div>
+							</div>
+
+							<div class="item">
+								<img src="inside.jpg" alt="Kemper Stairwell">
+								<div class="carousel-caption">
+									<h3>Kemper Stairwell</h3>
+									<p><left><i>Source: Tong, Kevin. Kemper Hall. 2011. Davis. Flickr. Web. 15 Dec. 2015. <https://www.flickr.com/photos/ucdaviscoe/6023627596/></left></i></p>
+								</div>
+							</div>
+
+							<div class="item">
+								<img src="lobby.jpg" alt="Lobby">
+								<div class="carousel-caption">
+									<h3>Kemper Lobby</h3>
+									<p><left><i>Source: Tong, Kevin. Kemper Hall. 2011. Davis. Flickr. Web. 15 Dec. 2015. <https://www.flickr.com/photos/ucdaviscoe/6023628768/></left></i></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+				</div>
+			</body>
+
+			</html>
