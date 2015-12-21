@@ -16,8 +16,8 @@
 				.button 
 				{
     				position: absolute;
-    				top: 10%;
-    				left:500px;
+    				top: 91.5%;
+    				left:451px;
 				} /* .button */
 				body 
         {
@@ -117,7 +117,15 @@
 				<button class="button" type="button" style="background-color:green" onclick="myFunction()"><font size="6" color = "black">Click for a random CS Joke!</font></button></font>
 		</div>
 	</body>
+	
+	<center><p>What is your name?</p></center>
 
+	<center><p><input id="conversation" type="text"></p></center>
+
+	<center><p><button type="button" onclick="processInput()">Submit</button></p></center>
+
+	<p id="demo"></p>
+	<!-- <p><i>Here is some jquery</i></p> -->
 	<script = "text/javascript">
 			function myFunction()
 			{
@@ -129,6 +137,44 @@
 					jokeHolder(x);
 				}//if
 			}
+
+			function processInput() {
+		    var inputText, text;
+
+		    // Get the value of the input field with id="numb"
+		    inputText = document.getElementById("conversation").value;
+		    inputText = inputText.toLowerCase();
+		    
+		    if(inputText.indexOf("edmond") > -1)
+			{
+			    alert("Edmond?! THE Edmond?  The prophecy was true! You have returned to save our species with your god-like coding skills!");
+			}
+			else if(inputText.indexOf("helen") > -1)
+			{
+				alert("Homewrecker.");
+			}
+			else if(inputText.indexOf("evan") > -1)
+			{
+				alert("No it's not. Stop lying");
+			}
+			else if(inputText.indexOf("rena") > -1)
+			{
+				alert("Get out");
+			}
+			else if(inputText.indexOf("peter") > -1)
+			{
+				alert("This site has nothing to do with basketball.  I think you're in the wrong place");
+			}
+			else if(inputText.indexOf("james") > -1)
+			{
+				alert("I hope you don't break the oath");
+			}
+			else
+			{
+				alert("It appears that your name is not yet recognized by this website. If it were, an inside joke would follow.");
+			}
+		    
+}
 			function jokeHolder(inputNum)
 			{
 					
@@ -175,5 +221,43 @@
 					}
 					
 			}
+
+			//end of button. moving on
+
+			$("document").ready(function()
+			{
+				$("p:has(i)").after("<p id='after_p'>Click this</p>");
+		 
+				  // When the element with the id 'after_p' is clicked
+				  // remove it from the document
+				  
+				  /*
+				  $("#after_p").click(function() 
+				  {
+				    $(this).remove();
+		  		  });
+				*/	
+
+		  		  $("#after_p").click(function() 
+		  		  {
+				    $(this).fadeOut(2000);
+				 
+				    // Redisplay the hidden element
+				    // You can also use .toggle(), .show() and .fadeIn()
+				    
+  				  });
+
+  				  $("#txt_name").keyup(function(){
+			            var userString = $('#txt_name').val();
+			            //$('#txt_name').val('bla'); //sets the value
+			            if(userString.indexOf("sunga") > -1)
+			            {
+			            	alert("You just inputted the secret password!");
+			            }
+			        });
+			})
+
 		</script>
+		
+
 </html>
